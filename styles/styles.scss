@@ -1,0 +1,72 @@
+@import 'setup.scss';
+@import 'utils.scss';
+@import 'typography.scss';
+
+// * {
+//     border: 1px solid red;
+// }
+
+body {
+background-image: linear-gradient( #dd1021 0%, #ffc300 100%);
+// background: #dd1021;
+margin: 0 auto;
+}
+
+header {
+    margin: 2%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+.question { 
+    display: flex;
+    margin-bottom: 2em;
+
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding: 16px 65px;
+}
+
+button:hover {
+    box-shadow: 3px 7px 14px #20bbfc;
+
+}
+
+.option {
+    border-radius: 5%;
+    margin: 2em;
+}
+
+/* gets rid of default radio labels */
+label.option > input {
+    visibility:hidden;
+}
+
+/* keeps images from going wonky when clicked */
+label.option > input + img {
+    cursor: pointer;
+    border: 10px solid transparent; 
+    border-radius: 5%;
+}
+
+// adds border around image when clicked
+label.option > input:checked + img {
+    border: 10px solid black;
+    border-radius: 5%;
+}
+
+
+// .right {
+//     display: block;
+//     color: grey;
+// }
+
+// .wrong {
+
+// }
