@@ -2,40 +2,76 @@
 @import 'utils.scss';
 @import 'typography.scss';
 
-// * {
-//     border: 1px solid red;
-// }
-
-body {
-background-image: linear-gradient( #dd1021 0%, #ffc300 100%);
-// background: #dd1021;
-margin: 0 auto;
+/* GENERAL STYLES */
+html {
+    font-size: 62.5%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
 }
 
+body {
+    font-family: $work-sans;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+section {
+    padding: 5% 0;
+}
+
+.container {
+    width: 79.68%;
+    max-width: 1530px;
+    margin: 0 auto;
+    // background:  white;;
+    // padding: 1%;
+}
+
+img { 
+	max-width: 100%;
+	border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+// OTHER STYLES
 header {
-    margin: 2%;
+    margin: 3%;
 }
 
 .title {
     display: flex;
     justify-content: center;
 }
+
+// BACKGROUND STYLES
+.light-bkgrd {
+    background: $primary;
+}
+
+.dark-bkgrd {
+    background: $primary;
+}
+
+.center {
+    text-align: center;
+}
+
 .question { 
     display: flex;
-    margin-bottom: 2em;
-
 }
 
-button {
-    display: block;
+form {
     margin: 0 auto;
-    border-radius: 50px;
-    padding: 16px 65px;
+    // background: white;
+    // padding: 5%;
 }
 
-button:hover {
-    box-shadow: 3px 7px 14px #20bbfc;
-
+form button {
+    margin-top: 5%;
 }
 
 .option {
@@ -43,6 +79,7 @@ button:hover {
     margin: 2em;
 }
 
+// LABEL STYLES
 /* gets rid of default radio labels */
 label.option > input {
     visibility:hidden;
@@ -55,18 +92,29 @@ label.option > input + img {
     border-radius: 5%;
 }
 
+label.option > input:hover + img {
+    cursor: pointer;
+    border: 10px solid blue; 
+    border-radius: 5%;
+}
+
 // adds border around image when clicked
 label.option > input:checked + img {
     border: 10px solid black;
     border-radius: 5%;
 }
 
+// BUTTON STYLES
+button {
+    display: block;
+    margin: 0 auto;
+    background: $accent;
+    border-radius: 50px;
+    padding: 16px 65px;
+}
 
-// .right {
-//     display: block;
-//     color: grey;
-// }
 
-// .wrong {
+button:hover {
+    box-shadow: 3px 7px 14px grey;
+}
 
-// }
