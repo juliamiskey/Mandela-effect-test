@@ -1,7 +1,5 @@
 
 $(function () { 
-
-    // $(".start").on("click").replaceWith(".question1")
     // User is presented with 2 options (radio buttons)
 
     // User clicks one of the two options 
@@ -22,7 +20,21 @@ $(function () {
     });
  });
 
-// PLAYING AROUND
+// Upon clicking submit a pop-up or another div appears:
+    // If chosen option has a class of "answer", the correct answer window appears and says RIGHT ANSWER (.correctAnswerWindow)
+    // If chosen option does not have a class of "answer", the incorrect answer window appears and says WRONG ANSWER (.incorrectAnswerWindow)
+    
+// The page now displays the next question
+
+// User continues to next question and clicks on one of the two options
+
+
+
+
+// PLAYING AROUND - HERE I AM TRYING TO MAKE IT SHOW ONE QESTION AT S TIME (inspo:http://jewlofthelotus.github.io/SlickQuiz/)
+
+    // $(".start").on("click").replaceWith(".question1")
+
 
 // const currentView = 0;
 
@@ -36,14 +48,6 @@ $(function () {
 //         currentView = currentView + 1; 
 //     }
 // }
-
-// Upon clicking submit a pop-up or another div appears:
-    // If chosen option has a class of "answer", the correct answer window appears and says YAY
-    // If chosen option does not have a class of "answer", the incorrect answer window appears and says BOO
-    
-// The page now displays the next question
-
-// User continues to next question and clicks on one of the two options
 
 // BONUS
 // COUNTER - FINAL SCORE
