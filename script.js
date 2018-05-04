@@ -1,35 +1,41 @@
 
-// User is presented with 2 options (radio buttons)
 $(function () { 
+
+    // $(".start").on("click").replaceWith(".question1")
+    // User is presented with 2 options (radio buttons)
+
+    // User clicks one of the two options 
+    // Once ok with their answer user clicks submit
     $('form').on('submit', function (e) {
-       
+
         e.preventDefault();
-        console.log('submited');
+
+        // Get the class name of the form that was submitted and store it in a variable of questionNumber
+        const questionNumber = $(this).attr('class');
+        console.log(questionNumber);
         
-        const userChoice = $('input[name=option1]:checked')
 
-        const rightAnswer = $('.true')
+        // use that class name to select the appropriate input with the same name attribute to see if the users choice has a class of "answer" to return true or false
+        const userChoice = $(`input[name=${questionNumber}]:checked`)
 
-
-        if (userChoice !== rightAnswer) {
-            console.log('You got it right!');
-        } else {
-            console.log('WRONG!');
-            
-        };
-
-        // const incorrect = $('input[name=option]:checked').val();
-
-        // const correct = $('.answer').attr();
-
-    
+        alert(userChoice.hasClass('answer'));
     });
  });
 
+// PLAYING AROUND
 
-// User clicks one of the two options 
+// const currentView = 0;
 
-// Once ok with their answer user clicks submit
+// let views = [".question1", ".question2", ".question3", ".question4", ".question5", ".question6", ".question7", ".question8", ".question9", ".question10", ".question11"]
+
+
+// function updateView(direction) {
+//     $(views[currentView]).toggleClass("hidden");
+
+//     if (direction === "next") {
+//         currentView = currentView + 1; 
+//     }
+// }
 
 // Upon clicking submit a pop-up or another div appears:
     // If chosen option has a class of "answer", the correct answer window appears and says YAY

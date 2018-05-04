@@ -12,8 +12,10 @@ html {
 
 body {
     font-family: $work-sans;
+    background: $primary;
     font-size: 1.6rem;
     line-height: 1.6;
+    color: $white;
 }
 
 section {
@@ -48,14 +50,6 @@ header {
 }
 
 // BACKGROUND STYLES
-.light-bkgrd {
-    background: $primary;
-}
-
-.dark-bkgrd {
-    background: $primary;
-}
-
 .center {
     text-align: center;
 }
@@ -82,7 +76,7 @@ form button {
 // LABEL STYLES
 /* gets rid of default radio labels */
 label.option > input {
-    visibility:hidden;
+    visibility: hidden;
 }
 
 /* keeps images from going wonky when clicked */
@@ -94,13 +88,13 @@ label.option > input + img {
 
 label.option > input:hover + img {
     cursor: pointer;
-    border: 10px solid blue; 
+    border: 10px solid $primary; 
     border-radius: 5%;
 }
 
 // adds border around image when clicked
 label.option > input:checked + img {
-    border: 10px solid black;
+    border: 10px solid $accent;
     border-radius: 5%;
 }
 
@@ -108,13 +102,15 @@ label.option > input:checked + img {
 button {
     display: block;
     margin: 0 auto;
+    color: $white;
+    text-transform: uppercase;
     background: $accent;
     border-radius: 50px;
     padding: 16px 65px;
 }
 
 
-button:hover {
-    box-shadow: 3px 7px 14px grey;
-}
+// button:hover {
+    
+// }
 
