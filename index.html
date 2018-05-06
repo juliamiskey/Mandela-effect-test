@@ -66,12 +66,12 @@
             </div>
     </header>
 
-    <button class="startQuiz">Start the Quiz</button>
+    <button class="startQuiz next">Start the Quiz</button>
 </section>
 
 
 <!-- QUESTION 1 -->
-<section class="question1">
+<section class="question1 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -93,7 +93,7 @@
 </section>
 
 <!-- QUESTION 2 -->
-<section class="question2">
+<section class="question2 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -115,7 +115,7 @@
 </section>
 
 <!-- QUESTION 3 -->
-<section class="question3">
+<section class="question3 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -137,7 +137,7 @@
 </section>
 
 <!-- QUESTION 4-->
-<sectionclass="question4">
+<section class="question4 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -159,7 +159,7 @@
 </section>
 
 <!-- QUESTION 5-->
-<section class="question5">
+<section class="question5 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -181,7 +181,7 @@
 </section>
 
  <!-- QUESTION 6 -->
-<section class="question6">
+<section class="question6 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -203,7 +203,7 @@
 </section>
 
 <!-- QUESTION 7 -->
-<section class="question7">
+<section class="question7 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -226,7 +226,7 @@
 
 
  <!-- QUESTION 8 -->
-<section class="question8">
+<section class="question8 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -249,7 +249,7 @@
 
 
 <!-- QUESTION 9-->
-<section class="question9">
+<section class="question9 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -272,7 +272,7 @@
 
 
 <!-- QUESTION 10-->
-<section class="question10">
+<section class="question10 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -295,7 +295,7 @@
 
 
 <!-- QUESTION 11-->
-<section class="question11">
+<section class="question11 hidden">
     <div class="container center">
         <h2 class="title">TITLE</h2>
         <div class="question">
@@ -318,22 +318,34 @@
 
 
 <!-- CHECK ANSWER OPTIONS -->
-
-    <!-- CORRECT ANSWER POPUP-->
-    <div class="answer-overlay">
+<div class="answer-overlay">
+    <!-- CORRECT ANSWER POPUP -->
     <div class="correctAnswer">
-            <h2 class="center">YOU'RE RIGHT!</h2>
-            <button class="close">Close</button>  
-        </div>
+        <h2 class="center">YOU'RE RIGHT!</h2>
+    </div>  
+    <!-- INCORRECT ANSWER POPUP-->
+    <div class="incorrectAnswer">
+        <h2 class="center">WRONG! YOU'RE LIVING IN AN ALTERNATE REALITY!</h2>
     </div>
+
+        <button class="close next">Close</button>
+</div>
+
+    <!-- CORRECT ANSWER POPUP -->
+    <!-- <div class="answer-overlay">
+        <div class="correctAnswer">
+            <h2 class="center">YOU'RE RIGHT!</h2>
+            <button class="close next">Close</button>  
+        </div>
+    </div> -->
 
     <!-- INCORRECT ANSWER POPUP-->
-    <div class="answer-overlay">
+    <!-- <div class="answer-overlay">
         <div class="incorrectAnswer">
             <h2 class="center">WRONG! YOU'RE LIVING IN AN ALTERNATE REALITY!</h2>
-            <button class="close">Close</button>
+            <button class="close next">Close</button>
         </div>
-    </div>
+    </div> -->
 
 
 <!-- FOOTER -->

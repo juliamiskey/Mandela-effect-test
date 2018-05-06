@@ -152,6 +152,9 @@ body {
   line-height: 1.6;
   color: white; }
 
+.hidden {
+  display: none; }
+
 section {
   padding: 5% 0; }
 
@@ -252,14 +255,16 @@ button {
   position: absolute;
   background: white;
   border: 3px solid #2d3e50;
-  width: 50%;
-  height: 50%;
-  left: 25%; }
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
 
 .answer-overlay.active {
   /*displays pop-up when "active" class is present*/
   visibility: visible;
-  text-align: center; }
+  text-align: center;
+  color: black; }
 
 .correctAnswer, .incorrectAnswer {
   /*Hides pop-up content when there is no "active" class */

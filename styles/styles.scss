@@ -18,6 +18,10 @@ body {
     color: $white;
 }
 
+.hidden {
+    display: none;
+}
+
 section {
     padding: 5% 0;
 }
@@ -149,15 +153,17 @@ button {
   position: absolute;
   background: $white;
   border: 3px solid $primary;
-  width: 50%;
-  height: 50%;
-  left: 25%; 
+ top: 0;
+ bottom: 0;
+ right: 0;
+ left: 0;
 }
 
 .answer-overlay.active {
   /*displays pop-up when "active" class is present*/
   visibility: visible;
   text-align: center;
+  color: black;
 }
 
 .correctAnswer, .incorrectAnswer {
