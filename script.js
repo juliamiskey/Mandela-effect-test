@@ -7,7 +7,7 @@ $(function () {
     // currentView represents the question that the user is currently on
     let currentView = 0;
     // the start Quiz is equal to 0, in the array and will increment by 1 as the class of next is clicked
-    let views = [".start", ".question1", ".question2", ".question3", ".question4", ".question5", ".question6", ".question7", ".question8", ".question9", ".question10", ".question11"]
+    let views = [".start", ".question1", ".question2", ".question3", ".question4", ".question5", ".question6", ".question7", ".question8", ".question9", ".question10", ".question11", ".end"]
     // Here we toggle the class of hidden on the current view because all sections/questions currently have a class of hidden and also toggles the class of hidden on the "next" question
     function updateView() {
         $(views[currentView]).toggleClass("hidden");
@@ -31,6 +31,7 @@ $(function () {
         // console logs true or false
         // alert(userChoice.hasClass('answer'));
         
+    
         // ANSWER POPUPS CONDITIONALS
         const rightAnswer = userChoice.hasClass('answer')
         console.log(rightAnswer);

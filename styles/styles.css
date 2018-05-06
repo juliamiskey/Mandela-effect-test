@@ -156,7 +156,8 @@ body {
   display: none; }
 
 section {
-  padding: 5% 0; }
+  padding: 5% 0;
+  position: relative; }
 
 .container {
   width: 79.68%;
@@ -168,7 +169,10 @@ img {
   border: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #e94d41; }
+  a:visited {
+    color: #e94d41; }
 
 header {
   margin: 3%; }
@@ -185,7 +189,8 @@ header a:visited {
 header a:hover {
   border-bottom: 1px solid #e94d41; }
 
-.main-title {
+.main-title,
+.end-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,7 +199,8 @@ header a:hover {
   justify-content: center;
   margin-top: 10px; }
 
-.main-title img {
+.main-title img,
+.end-title img {
   margin-right: 3px; }
 
 .center {
@@ -206,8 +212,9 @@ header a:hover {
   display: flex; }
 
 .title {
-  background: #f2c416;
+  background: #e94d41;
   color: white;
+  text-transform: uppercase;
   margin: 0; }
 
 .question {
@@ -233,7 +240,7 @@ label.option > input + img {
 
 label.option > input:hover + img {
   cursor: pointer;
-  border: 10px solid #2d3e50;
+  border: 10px solid #e94d41;
   border-radius: 5%; }
 
 label.option > input:checked + img {
@@ -248,6 +255,8 @@ button {
   background: #f2c416;
   border-radius: 50px;
   padding: 16px 65px; }
+  button:hover {
+    background: #e94d41; }
 
 .answer-overlay {
   /*Hides pop-up when there is no "active" class*/
@@ -260,11 +269,14 @@ button {
   right: 0;
   left: 0; }
 
+.answer-overlay h2 {
+  margin-top: 5%; }
+
 .answer-overlay.active {
   /*displays pop-up when "active" class is present*/
   visibility: visible;
   text-align: center;
-  color: black; }
+  color: #e94d41; }
 
 .correctAnswer, .incorrectAnswer {
   /*Hides pop-up content when there is no "active" class */
@@ -274,6 +286,12 @@ button {
   /*Shows pop-up content when "active" class is present */
   visibility: visible; }
 
+footer {
+  padding: 2%; }
+
 footer ul {
   list-style: none;
+  padding: 0; }
+
+footer ul li {
   display: inline-block; }
