@@ -44,17 +44,29 @@ header {
     margin: 3%;
 }
 
-header h2 span {
+header h2 {
+    margin-bottom: 3%;
+    span {
     text-transform: uppercase;
+    color: $secondary;
+    }
 }
 
-.title {
+header a:visited {
+    color: $secondary;
+}
+
+header a:hover {
+    border-bottom: 1px solid $secondary;
+}
+
+.main-title {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.title img {
+.main-title img {
     margin-right: 3px;
 }
 
@@ -67,15 +79,24 @@ header h2 span {
     display: flex;
 }
 
-form {
-    margin: 0 auto;
-    // background: white;
-    // padding: 5%;
+.title {
+    background: $accent;
+    color: $white;
+    margin: 0;
 }
 
-form button {
-    margin-top: 5%;
+.question {
+    background: $white;
+    padding: 5%;
 }
+
+form {
+    margin: 0 auto;
+}
+
+// form button {
+//     margin-top: 5%;
+// }
 
 .option {
     border-radius: 5%;
@@ -118,8 +139,39 @@ button {
     padding: 16px 65px;
 }
 
-
 // button:hover {
     
 // }
 
+.answer-overlay {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: $white;
+  border: 3px solid $primary;
+  width: 50%;
+  height: 50%;
+  left: 25%; 
+}
+
+.answer-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+.correctAnswer, .incorrectAnswer {
+  /*Hides pop-up content when there is no "active" class */
+ visibility: hidden;
+}
+
+.correctAnswer.active, .incorrectAnswer.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility: visible;
+}
+
+
+footer ul {
+    list-style: none;
+    display: inline-block;
+}

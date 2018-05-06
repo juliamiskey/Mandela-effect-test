@@ -8,33 +8,55 @@ $(function () {
 
         e.preventDefault();
 
-        // Get the class name of the form that was submitted and store it in a variable of questionNumber
+        // Here we get the class name of the form that was submitted and store it in a variable of 'questionNumber'
         const questionNumber = $(this).attr('class');
         console.log(questionNumber);
         
-
-        // use that class name to select the appropriate input with the same name attribute to see if the users choice has a class of "answer" to return true or false
+        // We then use questionNumber to select the appropriate input with the same name attribute to see if the userChoice has the class of "answer" to then return true or false
         const userChoice = $(`input[name=${questionNumber}]:checked`)
 
-        alert(userChoice.hasClass('answer'));
-    });
- });
+        // console logs true or false
+        console.log(userChoice.hasClass('answer'));
 
-// Upon clicking submit a pop-up or another div appears:
-    // If chosen option has a class of "answer", the correct answer window appears and says RIGHT ANSWER (.correctAnswerWindow)
-    // If chosen option does not have a class of "answer", the incorrect answer window appears and says WRONG ANSWER (.incorrectAnswerWindow)
-    
+         // ANSWER POPUPS CONDITIONALS
+        const rightAnswer = userChoice.hasClass('answer')
+
+        if (rightAnswer) {
+            // ANSWER POPUP FOR INCORRECT ANSWER
+            // If userChoice has a class of "answer" add class of "active" to .correctAnswer when the submit button is clicked
+            $(".checkAnswer").on("click", function () {
+                $(".answer-overlay, .correctAnswer").addClass("active");
+            });
+
+            //remove class of "active" to answer pop-up when the close button is clicked
+            $(".close, .answer-overlay").on("click", function () {
+                $(".answer-overlay, .correctAnswer").removeClass("active");
+            });
+        } else {
+            // ANSWER POPUP FOR INCORRECT ANSWER
+
+            //If userChoice DOES NOT have a class of "answer" add class of "active" to .incorrectAnswer when the submit button is clicked
+            $(".checkAnswer").on("click", function () {
+                $(".answer-overlay, .incorrectAnswer").addClass("active");
+            });
+
+            //remove class of "active" to answer pop-up when the close button is clicked
+            $(".close, .answer-overlay").on("click", function () {
+                $(".answer-overlay, .incorrectAnswer").removeClass("active");
+            });
+
+        }
+    });
+
+
+});
+
 // The page now displays the next question
 
-// User continues to next question and clicks on one of the two options
 
-
-
-
-// PLAYING AROUND - HERE I AM TRYING TO MAKE IT SHOW ONE QESTION AT S TIME (inspo:http://jewlofthelotus.github.io/SlickQuiz/)
+// PLAYING AROUND - HERE I AM TRYING TO MAKE IT SHOW ONE QUESTION AT S TIME (inspo:http://jewlofthelotus.github.io/SlickQuiz/)
 
     // $(".start").on("click").replaceWith(".question1")
-
 
 // const currentView = 0;
 
@@ -48,6 +70,7 @@ $(function () {
 //         currentView = currentView + 1; 
 //     }
 // }
+
 
 // BONUS
 // COUNTER - FINAL SCORE

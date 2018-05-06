@@ -170,19 +170,28 @@ a {
 header {
   margin: 3%; }
 
-header h2 span {
-  text-transform: uppercase; }
+header h2 {
+  margin-bottom: 3%; }
+  header h2 span {
+    text-transform: uppercase;
+    color: #e94d41; }
 
-.title {
+header a:visited {
+  color: #e94d41; }
+
+header a:hover {
+  border-bottom: 1px solid #e94d41; }
+
+.main-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 10px; }
+  margin-top: 10px; }
 
-.title img {
+.main-title img {
   margin-right: 3px; }
 
 .center {
@@ -193,11 +202,17 @@ header h2 span {
   display: -ms-flexbox;
   display: flex; }
 
+.title {
+  background: #f2c416;
+  color: white;
+  margin: 0; }
+
+.question {
+  background: white;
+  padding: 5%; }
+
 form {
   margin: 0 auto; }
-
-form button {
-  margin-top: 5%; }
 
 .option {
   border-radius: 5%;
@@ -230,3 +245,30 @@ button {
   background: #f2c416;
   border-radius: 50px;
   padding: 16px 65px; }
+
+.answer-overlay {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: white;
+  border: 3px solid #2d3e50;
+  width: 50%;
+  height: 50%;
+  left: 25%; }
+
+.answer-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center; }
+
+.correctAnswer, .incorrectAnswer {
+  /*Hides pop-up content when there is no "active" class */
+  visibility: hidden; }
+
+.correctAnswer.active, .incorrectAnswer.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility: visible; }
+
+footer ul {
+  list-style: none;
+  display: inline-block; }
