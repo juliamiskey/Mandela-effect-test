@@ -41,9 +41,10 @@ img {
 a {
     text-decoration: none;
     color: $secondary;
-    &:visited {
-        color: $secondary;
-    }
+}
+
+a:visited {
+    color: $secondary;
 }
 
 

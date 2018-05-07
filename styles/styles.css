@@ -171,8 +171,9 @@ img {
 a {
   text-decoration: none;
   color: #e94d41; }
-  a:visited {
-    color: #e94d41; }
+
+a:visited {
+  color: #e94d41; }
 
 header {
   margin: 3%; }
