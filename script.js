@@ -1,8 +1,6 @@
 
 // TO MAKE IT SHOW ONE QUESTION AT A TIME 
 
-
-
 $(function () { 
     // currentView represents the question that the user is currently on
     let currentView = 0;
@@ -71,8 +69,10 @@ $(function () {
 
 
 
-
 // BONUS
 // COUNTER - FINAL SCORE
 // if less than 50% correct "You are living in an alternate reality"
-// else "you have a great memory and bragging rights!""
+// else "you have a great memory and bragging rights!"
+
+// EXTRA BONUS
+// Leaderboard to see how to rank against your peers
